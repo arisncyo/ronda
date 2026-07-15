@@ -79,14 +79,7 @@ export default function CtaSection() {
           </span>
         </div>
       </div>
-      <div
-        className="max-w-6xl mx-auto mt-16 pt-8 text-center"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
-      >
-        <p className="text-sm" style={{ color: "rgba(255,255,255,0.35)" }}>
-          &copy; {new Date().getFullYear()} Ronda CCTV. All rights reserved.
-        </p>
-      </div>
+
     </section>
   );
 }

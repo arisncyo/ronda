@@ -39,7 +39,7 @@ export default function Hero() {
                 Konsultasi Gratis
               </a>
               <Link
-                href="/paket"
+                href="/#paket"
                 className="group flex items-center gap-2 font-sans text-[17px] font-bold px-7 py-4 rounded-xl transition-all duration-300 no-underline bg-[#042327] text-white hover:bg-[#063238] border border-white/10 hover:scale-[1.03] hover:shadow-lg hover:shadow-black/20 active:scale-95"
               >
                 Lihat Paket

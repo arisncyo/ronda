@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const pakets = [
   {
     label: "Hemat",
@@ -11,8 +9,8 @@ const pakets = [
       "4 Kamera CCTV indoor/outdoor",
       "DVR 4 channel + HDD 1TB",
       "Kabel power & video 20m",
-      "Akses HP (remote view)",
-      "Instalasi & testing",
+      "1 Unit Adaptor",
+      "Akses HP Online",
     ],
     href: "/paket",
     featured: false,
@@ -27,8 +25,8 @@ const pakets = [
       "8 Kamera CCTV indoor/outdoor",
       "DVR 8 channel + HDD 2TB",
       "Kabel power & video 30m",
-      "Akses HP multi-user",
-      "Instalasi rapi & optimasi sudut",
+      "1 Unit Adaptor",
+      "Akses HP Online",
     ],
     href: "#",
     featured: true,
@@ -43,8 +41,8 @@ const pakets = [
       "16 Kamera CCTV + perencanaan jalur",
       "NVR 16 channel + HDD 4TB",
       "Kabel power & video 50m",
-      "Remote view & notifikasi",
-      "Dokumentasi & serah terima",
+      "1 Unit Adaptor",
+      "Akses HP Online",
     ],
     href: "/paket",
     featured: false,
@@ -139,16 +137,14 @@ export default function PaketSection() {
                 ))}
               </ul>
 
-              <Link
-                href={paket.href}
-                className={`block font-[family-name:var(--font-afacad)] text-base font-bold text-white py-3 rounded-xl no-underline transition-all duration-300 text-center ${
-                  paket.featured
-                    ? "bg-[#1888CD] hover:bg-[#042327]"
-                    : "bg-[#042327] hover:bg-[#1888CD]"
-                }`}
+              <a
+                href={`https://wa.me/628000000000?text=Halo%20Ronda%20CCTV,%20saya%20tertarik%20dengan%20${encodeURIComponent(paket.name)}.%20Mohon%20info%20lebih%20lanjut.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block font-[family-name:var(--font-afacad)] text-base font-bold text-white py-3 rounded-xl no-underline transition-all duration-300 text-center bg-[#1888CD] hover:bg-[#042327]"
               >
-                {paket.featured ? "Pilih Paket" : "Lihat Detail"}
-              </Link>
+                Pilih Paket
+              </a>
             </div>
           ))}
         </div>

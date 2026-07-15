@@ -14,19 +14,16 @@ export default function TentangSection() {
               className="text-lg leading-relaxed mb-4"
               style={{ color: "#50595A" }}
             >
-              Kami adalah penyedia jasa instalasi, pemasangan, dan maintenance
-              CCTV yang melayani Surabaya, Sidoarjo, Gresik, dan sekitarnya.
-              Didukung teknisi berpengalaman, kami siap memberikan solusi
-              keamanan untuk rumah, kantor, toko, gudang, hingga pabrik dengan
-              pemasangan yang rapi, berkualitas, dan bergaransi.
+              Penyedia jasa instalasi dan pemeliharaan CCTV untuk rumah, kantor,
+              toko, gudang, hingga pabrik di Surabaya, Sidoarjo, Gresik, dan
+              sekitarnya.
             </p>
             <p
               className="text-lg leading-relaxed mb-6"
               style={{ color: "#50595A" }}
             >
-              Setiap pemasangan ditangani oleh teknisi berpengalaman dengan
-              garansi resmi. Kami menggunakan perangkat berkualitas terbaik agar
-              sistem keamanan Anda berfungsi optimal.
+              Setiap proyek dikerjakan oleh teknisi berpengalaman dengan garansi
+              resmi dan perangkat berkualitas terbaik.
             </p>
             <div className="flex gap-8">
               <div>

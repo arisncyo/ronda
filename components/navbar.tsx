@@ -3,6 +3,7 @@ import MobileMenu from "@/components/mobile-menu";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/katalog", label: "Katalog" },
   { href: "/#paket", label: "Paket" },
   { href: "/#layanan", label: "Layanan" },
   { href: "/artikel", label: "Artikel" },
