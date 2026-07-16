@@ -1,50 +1,53 @@
 const pakets = [
   {
     label: "Hemat",
-    name: "Paket 4 Kamera",
-    cocok: "Cocok untuk rumah & ruko kecil",
-    priceOld: "Rp 3.200.000",
-    priceMain: "Rp 2.599.000",
+    name: "Paket 4 Channel",
+    cocok: "Cocok untuk rumah & toko kecil",
+    priceOld: "Rp 2.800.000",
+    priceMain: "Rp 2.399.000",
     features: [
-      "4 Kamera CCTV indoor/outdoor",
-      "DVR 4 channel + HDD 1TB",
+      "2 Kamera CCTV indoor/outdoor",
+      "DVR 4 channel + HDD 500GB",
       "Kabel power & video 20m",
-      "1 Unit Adaptor",
+      "Power Supply",
       "Akses HP Online",
+      "Jasa Instalasi"
     ],
-    href: "/paket",
+    href: "#paket",
     featured: false,
   },
   {
     label: "Terlaris",
-    name: "Paket 8 Kamera",
-    cocok: "Untuk kantor, toko & gudang kecil",
+    name: "Paket 4 Channel",
+    cocok: "Untuk rumah, toko & gudang kecil",
     priceOld: "Rp 5.500.000",
     priceMain: "Rp 4.799.000",
     features: [
-      "8 Kamera CCTV indoor/outdoor",
-      "DVR 8 channel + HDD 2TB",
+      "4 Kamera CCTV indoor/outdoor",
+      "DVR 4 channel + HDD 1TB",
       "Kabel power & video 30m",
-      "1 Unit Adaptor",
+      "Power Supply",
       "Akses HP Online",
+      "Jasa Instalasi"
     ],
-    href: "#",
+    href: "#paket",
     featured: true,
   },
   {
     label: "Bisnis",
-    name: "Paket 16 Kamera",
-    cocok: "Untuk area luas & monitoring intensif",
-    priceOld: "Rp 9.800.000",
-    priceMain: "Rp 8.499.000",
+    name: "Paket 8 Channel",
+    cocok: "Untuk Kantor, Gudang dan area luas",
+    priceOld: "Rp 12.499.000",
+    priceMain: "Rp 12.499.000",
     features: [
-      "16 Kamera CCTV + perencanaan jalur",
-      "NVR 16 channel + HDD 4TB",
-      "Kabel power & video 50m",
-      "1 Unit Adaptor",
+      "8 Kamera CCTV + perencanaan jalur",
+      "NVR 8 channel + HDD 2TB",
+      "Kabel power & video 150m",
+      "Power Supply",
       "Akses HP Online",
+      "Jasa Instalasi"
     ],
-    href: "/paket",
+    href: "#paket",
     featured: false,
   },
 ];
@@ -84,11 +87,10 @@ export default function PaketSection() {
           {pakets.map((paket) => (
             <div
               key={paket.name}
-              className={`relative bg-white rounded-2xl p-9 text-center border transition-all duration-300 ${
-                paket.featured
-                  ? "border-[#1888CD] shadow-[0_8px_32px_rgba(24,136,205,0.15)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
-                  : "border-[#eef2f6] shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
-              } hover:-translate-y-2`}
+              className={`relative bg-white rounded-2xl p-9 text-center border transition-all duration-300 ${paket.featured
+                ? "border-[#1888CD] shadow-[0_8px_32px_rgba(24,136,205,0.15)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
+                : "border-[#eef2f6] shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
+                } hover:-translate-y-2`}
             >
               {paket.featured && (
                 <div className="absolute top-[-12px] left-1/2 -translate-x-1/2 bg-[#1888CD] text-white text-[13px] font-bold px-5 py-1 rounded-full tracking-[0.5px]">
