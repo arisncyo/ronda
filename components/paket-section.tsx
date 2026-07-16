@@ -86,7 +86,7 @@ export default function PaketSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pakets.map((paket) => (
             <div
-              key={paket.name}
+              key={`${paket.name}-${paket.label}`}
               className={`relative bg-white rounded-2xl p-9 text-center border transition-all duration-300 ${paket.featured
                 ? "border-[#1888CD] shadow-[0_8px_32px_rgba(24,136,205,0.15)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
                 : "border-[#eef2f6] shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
