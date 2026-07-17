@@ -71,42 +71,42 @@ export default function ArtikelPage() {
 
       <section className="max-w-6xl mx-auto px-4">
         {filteredArticles.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {filteredArticles.map((article) => (
               <Link
                 key={article.id}
                 href={`/artikel/${article.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden border border-[#eef2f6] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 no-underline flex flex-col h-full"
+                className="group bg-white rounded-xl overflow-hidden border border-[#eef2f6] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 no-underline flex flex-col"
               >
-                <div className="relative h-44 w-full bg-slate-100 overflow-hidden">
+                <div className="relative h-32 w-full bg-slate-100 overflow-hidden">
                   <img
                     src={article.imageUrl}
                     alt={article.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute top-3 left-3 bg-[#1888CD] text-white text-xs font-bold px-2.5 py-1 rounded-lg">
+                  <span className="absolute top-2.5 left-2.5 bg-[#1888CD] text-white text-[10px] font-bold px-2 py-0.5 rounded-md">
                     {article.category}
                   </span>
                 </div>
 
-                <div className="p-5 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 text-xs text-slate-400 font-semibold mb-2">
+                <div className="p-3.5 flex flex-col flex-grow">
+                  <div className="flex items-center gap-1.5 text-[10px] text-slate-400 font-semibold mb-1.5">
                     <span>{article.date}</span>
                     <span>•</span>
                     <span>{article.readTime} Baca</span>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#042327] mb-2 leading-snug line-clamp-2 group-hover:text-[#1888CD] transition-colors">
+                  <h3 className="text-sm font-bold text-[#042327] mb-1.5 leading-snug line-clamp-2 group-hover:text-[#1888CD] transition-colors">
                     {article.title}
                   </h3>
 
-                  <p className="text-sm text-[#50595A] leading-relaxed line-clamp-3 mb-4">
+                  <p className="text-[11px] text-[#50595A] leading-relaxed line-clamp-2 mb-3">
                     {article.summary}
                   </p>
 
-                  <span className="mt-auto inline-flex items-center gap-1 text-sm font-bold text-[#1888CD] group-hover:gap-2 transition-all self-start">
+                  <span className="mt-auto inline-flex items-center gap-1 text-xs font-bold text-[#1888CD] group-hover:gap-2 transition-all self-start">
                     Baca Selengkapnya
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
                   </span>
