@@ -83,13 +83,13 @@ const fitur_list = [
 
 export default function FiturSection() {
   return (
-    <section className="py-20 px-4 bg-[#f8fafc]">
+    <section className="py-20 px-4 bg-surface">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-3" style={{ color: "#042327" }}>
+          <h2 className="text-4xl font-bold mb-3 text-secondary">
             Fitur Favorit
           </h2>
-          <p className="text-lg max-w-3xl mx-auto" style={{ color: "#50595A" }}>
+          <p className="text-lg max-w-3xl mx-auto text-body">
             Pantau rumah, kantor, toko, atau gudang secara real-time dari
             smartphone, tablet, atau komputer. Akses aman dan mudah kapan saja.
           </p>
@@ -106,16 +106,14 @@ export default function FiturSection() {
           </div>
           <div className="space-y-6">
             <div>
-              <h3
-                className="text-3xl font-bold mb-3"
-                style={{ color: "#042327" }}
-              >
+<h3
+            className="text-3xl font-bold mb-3 text-secondary"
+          >
                 Pantau dari Mana Saja, Kapan Saja
               </h3>
-              <p
-                className="text-lg leading-relaxed"
-                style={{ color: "#50595A" }}
-              >
+<p
+            className="text-lg leading-relaxed text-body"
+          >
                 Setelah instalasi, tim kami melakukan setup aplikasi dan
                 konfigurasi perangkat hingga siap pakai. Anda tinggal menikmati
                 pantauan langsung kapan pun dibutuhkan.
@@ -128,22 +126,17 @@ export default function FiturSection() {
                   className="flex items-start gap-4 bg-white rounded-xl p-4"
                 >
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{
-                      background: "rgba(24,136,205,0.1)",
-                      color: "#1888CD",
-                    }}
+                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-primary/10 text-primary"
                   >
                     {item.icon}
                   </div>
                   <div className="min-w-0">
                     <h4
-                      className="font-bold text-sm"
-                      style={{ color: "#042327" }}
+                      className="font-bold text-sm text-secondary"
                     >
                       {item.title}
                     </h4>
-                    <p className="text-sm mt-0.5" style={{ color: "#50595A" }}>
+                    <p className="text-sm mt-0.5 text-body">
                       {item.desc}
                     </p>
                   </div>

@@ -4,47 +4,42 @@ export default function TentangSection() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
-            <h2
-              className="text-4xl font-bold mb-4"
-              style={{ color: "#042327" }}
-            >
+<h2
+            className="text-4xl font-bold mb-4 text-secondary"
+          >
               Tentang Kami
             </h2>
-            <p
-              className="text-lg leading-relaxed mb-4"
-              style={{ color: "#50595A" }}
-            >
+<p
+            className="text-lg leading-relaxed mb-4 text-body"
+          >
               Penyedia jasa instalasi dan pemeliharaan CCTV untuk rumah, kantor,
               toko, gudang, hingga pabrik di Surabaya, Sidoarjo, Gresik, dan
               sekitarnya.
             </p>
-            <p
-              className="text-lg leading-relaxed mb-6"
-              style={{ color: "#50595A" }}
-            >
+<p
+            className="text-lg leading-relaxed mb-6 text-body"
+          >
               Setiap proyek dikerjakan oleh teknisi berpengalaman dengan garansi
               resmi dan perangkat berkualitas terbaik.
             </p>
             <div className="flex gap-8">
               <div>
-                <span
-                  className="text-3xl font-bold"
-                  style={{ color: "#1888CD" }}
-                >
-                  100+
-                </span>
-                <p className="text-sm mt-1" style={{ color: "#50595A" }}>
+<span
+            className="text-3xl font-bold text-primary"
+          >
+            100+
+          </span>
+                <p className="text-sm mt-1 text-body">
                   Proyek Selesai
                 </p>
               </div>
               <div>
-                <span
-                  className="text-3xl font-bold"
-                  style={{ color: "#1888CD" }}
-                >
-                  2+
-                </span>
-                <p className="text-sm mt-1" style={{ color: "#50595A" }}>
+<span
+            className="text-3xl font-bold text-primary"
+          >
+            2+
+          </span>
+                <p className="text-sm mt-1 text-body">
                   Tahun Pengalaman
                 </p>
               </div>

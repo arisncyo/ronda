@@ -21,8 +21,8 @@ export default function ArtikelPage() {
   });
 
   return (
-    <main className="min-h-screen bg-[#f8fafc] pt-[70px] pb-16">
-      <section className="bg-[#1888CD] text-white py-14 px-4">
+    <main className="min-h-screen bg-surface pt-[70px] pb-16">
+      <section className="bg-primary text-white py-14 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3">
             Artikel & Edukasi Keamanan
@@ -35,7 +35,7 @@ export default function ArtikelPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 mt-10 mb-8">
-        <div className="bg-white rounded-2xl p-6 border border-[#eef2f6] flex flex-col md:flex-row gap-4 items-center justify-between">
+        <div className="bg-white rounded-2xl p-6 border border-border flex flex-col md:flex-row gap-4 items-center justify-between">
           <div className="flex flex-wrap gap-2 w-full md:w-auto">
             {categories.map((cat) => (
               <button
@@ -44,8 +44,8 @@ export default function ArtikelPage() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
                   selectedCategory === cat
-                    ? "bg-[#1888CD] text-white shadow-md shadow-[#1888CD]/20"
-                    : "bg-[#f1f5f9] text-[#50595A] hover:bg-[#e2e8f0]"
+                    ? "bg-primary text-white shadow-md shadow-primary/20"
+                    : "bg-slate-100 text-body hover:bg-slate-200"
                 }`}
               >
                 {cat}
@@ -63,7 +63,7 @@ export default function ArtikelPage() {
               placeholder="Cari artikel..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-[#f1f5f9] text-[#042327] rounded-xl border border-transparent focus:border-[#1888CD] focus:bg-white outline-none transition-all duration-300 text-sm font-medium"
+              className="w-full pl-10 pr-4 py-2.5 bg-slate-100 text-secondary rounded-xl border border-transparent focus:border-primary focus:bg-white outline-none transition-all duration-300 text-sm font-medium"
             />
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function ArtikelPage() {
               <Link
                 key={article.id}
                 href={`/artikel/${article.slug}`}
-                className="group bg-white rounded-xl overflow-hidden border border-[#eef2f6] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 no-underline flex flex-col"
+                className="group bg-white rounded-xl overflow-hidden border border-border hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 no-underline flex flex-col"
               >
                 <div className="relative h-32 w-full bg-slate-100 overflow-hidden">
                   <img
@@ -84,7 +84,7 @@ export default function ArtikelPage() {
                     alt={article.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute top-2.5 left-2.5 bg-[#1888CD] text-white text-[10px] font-bold px-2 py-0.5 rounded-md">
+                  <span className="absolute top-2.5 left-2.5 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-md">
                     {article.category}
                   </span>
                 </div>
@@ -96,15 +96,15 @@ export default function ArtikelPage() {
                     <span>{article.readTime} Baca</span>
                   </div>
 
-                  <h3 className="text-sm font-bold text-[#042327] mb-1.5 leading-snug line-clamp-2 group-hover:text-[#1888CD] transition-colors">
+                  <h3 className="text-sm font-bold text-secondary mb-1.5 leading-snug line-clamp-2 group-hover:text-primary transition-colors">
                     {article.title}
                   </h3>
 
-                  <p className="text-[11px] text-[#50595A] leading-relaxed line-clamp-2 mb-3">
+                  <p className="text-[11px] text-body leading-relaxed line-clamp-2 mb-3">
                     {article.summary}
                   </p>
 
-                  <span className="mt-auto inline-flex items-center gap-1 text-xs font-bold text-[#1888CD] group-hover:gap-2 transition-all self-start">
+                  <span className="mt-auto inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:gap-2 transition-all self-start">
                     Baca Selengkapnya
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -115,14 +115,14 @@ export default function ArtikelPage() {
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-2xl p-12 text-center border border-[#eef2f6] shadow-sm">
+          <div className="bg-white rounded-2xl p-12 text-center border border-border shadow-sm">
             <svg className="w-16 h-16 text-slate-300 mx-auto mb-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
             </svg>
-            <h3 className="text-xl font-bold text-[#042327] mb-1">
+            <h3 className="text-xl font-bold text-secondary mb-1">
               Artikel Tidak Ditemukan
             </h3>
-            <p className="text-sm text-[#50595A]">
+            <p className="text-sm text-body">
               Tidak ada artikel yang cocok dengan kata kunci pencarian atau
               kategori Anda.
             </p>
@@ -131,7 +131,7 @@ export default function ArtikelPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 mt-16">
-        <div className="relative rounded-3xl bg-gradient-to-r from-[#1888CD] to-[#042327] text-white p-8 md:p-12 overflow-hidden shadow-lg">
+        <div className="relative rounded-3xl bg-gradient-to-r from-primary to-secondary text-white p-8 md:p-12 overflow-hidden shadow-lg">
           <div className="relative z-10 max-w-2xl mx-auto text-center">
             <h3 className="text-2xl sm:text-3xl font-black mb-3">
               Ingin Meningkatkan Keamanan Properti Anda?
@@ -146,7 +146,7 @@ export default function ArtikelPage() {
                 href="https://wa.me/628000000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white text-[#042327] hover:bg-[#f0f4f8] font-bold text-sm sm:text-base px-6 py-3 rounded-xl transition-all duration-300 no-underline shadow-md"
+                className="inline-flex items-center gap-2 bg-white text-secondary hover:bg-slate-100 font-bold text-sm sm:text-base px-6 py-3 rounded-xl transition-all duration-300 no-underline shadow-md"
               >
                 Konsultasi WhatsApp Sekarang
               </a>

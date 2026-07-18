@@ -3,24 +3,16 @@ import MobileMenu from "@/components/mobile-menu";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/katalog", label: "Katalog" },
   { href: "/#paket", label: "Paket" },
   { href: "/#layanan", label: "Layanan" },
-  { href: "/artikel", label: "Artikel" },
   { href: "/#tentang", label: "Tentang Kami" },
 ];
 
 export default function Navbar() {
   return (
     <header>
-      <nav
-        className="fixed top-0 left-0 w-full z-50 bg-[#1888CD]"
-        style={{ minHeight: 70 }}
-      >
-        <div
-          className="max-w-6xl mx-auto px-4 flex items-center justify-between"
-          style={{ minHeight: 70 }}
-        >
+      <nav className="fixed top-0 left-0 w-full z-50 bg-primary">
+        <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 no-underline">
             <svg
               width="32"
@@ -66,7 +58,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-[family-name:var(--font-afacad)] text-lg font-medium text-white no-underline px-[14px] py-[26px] inline-block leading-normal transition-opacity duration-300 hover:opacity-80"
+                    className="font-[family-name:var(--font-afacad)] text-lg font-medium text-white no-underline px-6 py-3 inline-block leading-normal transition-opacity duration-300 hover:opacity-80"
                   >
                     {link.label}
                   </Link>

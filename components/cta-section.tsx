@@ -1,6 +1,6 @@
 export default function CtaSection() {
   return (
-    <section className="py-20 px-4" style={{ background: "#042327" }}>
+    <section className="py-20 px-4 bg-secondary">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4 text-white">
           Butuh Survey atau Penawaran Harga?
@@ -12,11 +12,7 @@ export default function CtaSection() {
           href="https://wa.me/628000000000"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2.5 font-[family-name:var(--font-afacad)] text-[19px] font-bold text-white no-underline px-10 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
-          style={{
-            background: "#25D366",
-            boxShadow: "0 8px 24px rgba(37,211,102,0.3)",
-          }}
+          className="inline-flex items-center gap-2.5 font-[family-name:var(--font-afacad)] text-[19px] font-bold text-white no-underline px-10 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 bg-success shadow-[0_8px_24px_rgba(37,211,102,0.3)]"
         >
           <svg
             width="22"

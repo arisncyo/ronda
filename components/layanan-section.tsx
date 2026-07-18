@@ -111,17 +111,16 @@ const layanan = [
 
 export default function LayananSection() {
   return (
-    <section
-      id="layanan"
-      className="py-20 px-4"
-      style={{ background: "#f8fafc" }}
+      <section
+        id="layanan"
+        className="py-20 px-4 bg-surface"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-3" style={{ color: "#042327" }}>
+          <h2 className="text-4xl font-bold mb-3 text-secondary">
             Layanan Kami
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: "#50595A" }}>
+          <p className="text-lg max-w-2xl mx-auto text-body">
             Solusi lengkap untuk kebutuhan keamanan properti Anda
           </p>
         </div>
@@ -129,21 +128,19 @@ export default function LayananSection() {
           {layanan.map((item) => (
             <div
               key={item.title}
-              className="group bg-white rounded-2xl p-8 text-center border border-[#eef2f6] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(24,136,205,0.1)]"
+              className="group bg-white rounded-2xl p-8 text-center border border-border transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(24,136,205,0.1)]"
             >
-              <div className="w-[60px] h-[60px] mx-auto mb-4 rounded-full flex items-center justify-center text-2xl text-[#1888CD] transition-all duration-300 bg-[rgba(24,136,205,0.1)] group-hover:bg-[#1888CD] group-hover:text-white">
+              <div className="w-[60px] h-[60px] mx-auto mb-4 rounded-full flex items-center justify-center text-2xl text-primary transition-all duration-300 bg-primary/10 group-hover:bg-primary group-hover:text-white">
                 {item.icon}
               </div>
-              <h3
-                className="text-xl font-bold mb-2.5"
-                style={{ color: "#042327" }}
-              >
+<h3
+            className="text-xl font-bold mb-2.5 text-secondary"
+          >
                 {item.title}
               </h3>
-              <p
-                className="text-[15px] leading-relaxed m-0"
-                style={{ color: "#50595A" }}
-              >
+<p
+            className="text-[15px] leading-relaxed m-0 text-body"
+          >
                 {item.desc}
               </p>
             </div>

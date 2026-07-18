@@ -111,13 +111,13 @@ const why_us = [
 
 export default function WhyUsSection() {
   return (
-    <section className="py-20 px-4" style={{ background: "#f8fafc" }}>
+    <section className="py-20 px-4 bg-surface">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-3" style={{ color: "#042327" }}>
+          <h2 className="text-4xl font-bold mb-3 text-secondary">
             Kenapa Harus Memilih Kami?
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: "#50595A" }}>
+          <p className="text-lg max-w-2xl mx-auto text-body">
             Kami berkomitmen memberikan layanan terbaik untuk keamanan properti
             Anda
           </p>
@@ -126,21 +126,19 @@ export default function WhyUsSection() {
           {why_us.map((item) => (
             <div
               key={item.title}
-              className="group bg-white rounded-2xl p-8 text-center border border-[#eef2f6] shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(24,136,205,0.12)] hover:border-[#1888CD]"
+              className="group bg-white rounded-2xl p-8 text-center border border-border shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(24,136,205,0.12)] hover:border-primary"
             >
-              <div className="w-16 h-16 mx-auto mb-[18px] rounded-2xl bg-[#1888CD] flex items-center justify-center text-white text-[26px] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
+              <div className="w-16 h-16 mx-auto mb-[18px] rounded-2xl bg-primary flex items-center justify-center text-white text-[26px] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                 {item.icon}
               </div>
-              <h3
-                className="text-xl font-bold mb-2.5"
-                style={{ color: "#042327" }}
-              >
+<h3
+            className="text-xl font-bold mb-2.5 text-secondary"
+          >
                 {item.title}
               </h3>
-              <p
-                className="text-[15px] leading-relaxed m-0"
-                style={{ color: "#50595A" }}
-              >
+<p
+            className="text-[15px] leading-relaxed m-0 text-body"
+          >
                 {item.desc}
               </p>
             </div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-[#1888CD] text-white pt-32 pb-16 md:pb-24 lg:pb-32 z-10">
+    <div className="relative overflow-hidden bg-primary text-white pt-32 pb-16 md:pb-24 lg:pb-32 z-10">
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
           <div className="w-full lg:w-1/2 text-left">
@@ -25,7 +25,7 @@ export default function Hero() {
                 href="https://wa.me/628000000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 font-sans text-[17px] font-bold px-7 py-4 rounded-xl transition-all duration-300 no-underline bg-white text-[#042327] hover:bg-[#f0f4f8] hover:scale-[1.03] hover:shadow-lg hover:shadow-sky-500/10 active:scale-95"
+                className="flex items-center gap-2.5 font-sans text-[17px] font-bold px-7 py-4 rounded-xl transition-all duration-300 no-underline bg-white text-secondary hover:bg-slate-100 hover:scale-[1.03] hover:shadow-lg hover:shadow-sky-500/10 active:scale-95"
               >
                 <svg
                   className="w-5 h-5 flex-shrink-0"
@@ -40,7 +40,7 @@ export default function Hero() {
               </a>
               <Link
                 href="/#paket"
-                className="group flex items-center gap-2 font-sans text-[17px] font-bold px-7 py-4 rounded-xl transition-all duration-300 no-underline bg-[#042327] text-white hover:bg-[#063238] border border-white/10 hover:scale-[1.03] hover:shadow-lg hover:shadow-black/20 active:scale-95"
+                className="group flex items-center gap-2 font-sans text-[17px] font-bold px-7 py-4 rounded-xl transition-all duration-300 no-underline bg-secondary text-white hover:bg-secondary-hover border border-white/10 hover:scale-[1.03] hover:shadow-lg hover:shadow-black/20 active:scale-95"
               >
                 Lihat Paket
                 <svg

@@ -76,10 +76,10 @@ export default function PaketSection() {
     <section id="paket" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-3" style={{ color: "#042327" }}>
+          <h2 className="text-4xl font-bold mb-3 text-secondary">
             Paket Terlaris
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: "#50595A" }}>
+          <p className="text-lg max-w-2xl mx-auto text-body">
             Harga sudah termasuk biaya pemasangan & bergaransi
           </p>
         </div>
@@ -88,40 +88,37 @@ export default function PaketSection() {
             <div
               key={`${paket.name}-${paket.label}`}
               className={`relative bg-white rounded-2xl p-9 text-center border transition-all duration-300 ${paket.featured
-                ? "border-[#1888CD] shadow-[0_8px_32px_rgba(24,136,205,0.15)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
-                : "border-[#eef2f6] shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
+                ? "border-primary shadow-[0_8px_32px_rgba(24,136,205,0.15)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
+                : "border-border shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_40px_rgba(24,136,205,0.12)]"
                 } hover:-translate-y-2`}
             >
               {paket.featured && (
-                <div className="absolute top-[-12px] left-1/2 -translate-x-1/2 bg-[#1888CD] text-white text-[13px] font-bold px-5 py-1 rounded-full tracking-[0.5px]">
+                <div className="absolute top-[-12px] left-1/2 -translate-x-1/2 bg-primary text-white text-[13px] font-bold px-5 py-1 rounded-full tracking-[0.5px]">
                   Terlaris
                 </div>
               )}
 
               <p
-                className="text-[14px] font-semibold uppercase tracking-[1px] mb-2"
-                style={{ color: "#1888CD" }}
+                className="text-[14px] font-semibold uppercase tracking-[1px] mb-2 text-primary"
               >
                 {paket.label}
               </p>
-              <h3
-                className="text-2xl font-extrabold mb-1.5"
-                style={{ color: "#042327" }}
-              >
+<h3
+            className="text-2xl font-extrabold mb-1.5 text-secondary"
+          >
                 {paket.name}
               </h3>
-              <p className="text-sm mb-5" style={{ color: "#50595A" }}>
+              <p className="text-sm mb-5 text-body">
                 {paket.cocok}
               </p>
 
-              <div className="mb-6 pb-5 border-b border-[#eef2f6]">
+              <div className="mb-6 pb-5 border-b border-border">
                 <span className="text-base text-[#999] line-through block mb-0.5">
                   {paket.priceOld}
                 </span>
-                <span
-                  className="text-[32px] font-extrabold"
-                  style={{ color: "#042327" }}
-                >
+<span
+            className="text-[32px] font-extrabold text-secondary"
+          >
                   {paket.priceMain}
                 </span>
               </div>
@@ -130,8 +127,7 @@ export default function PaketSection() {
                 {paket.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-center gap-2 py-1.5 text-sm"
-                    style={{ color: "#50595A" }}
+                    className="flex items-center gap-2 py-1.5 text-sm text-body"
                   >
                     <CheckIcon />
                     {feature}
@@ -143,7 +139,7 @@ export default function PaketSection() {
                 href={`https://wa.me/628000000000?text=Halo%20Ronda%20CCTV,%20saya%20tertarik%20dengan%20${encodeURIComponent(paket.name)}.%20Mohon%20info%20lebih%20lanjut.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block font-[family-name:var(--font-afacad)] text-base font-bold text-white py-3 rounded-xl no-underline transition-all duration-300 text-center bg-[#1888CD] hover:bg-[#042327]"
+                className="block font-[family-name:var(--font-afacad)] text-base font-bold text-white py-3 rounded-xl no-underline transition-all duration-300 text-center bg-primary hover:bg-secondary"
               >
                 Pilih Paket
               </a>

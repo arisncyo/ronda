@@ -20,7 +20,7 @@ export default function MobileMenu({ links }: { links: LinkItem[] }) {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 w-full md:hidden bg-[#042327] px-4 pb-5">
+        <div className="absolute top-full left-0 w-full md:hidden bg-secondary px-4 pb-5">
           {links.map((link) => (
             <Link
               key={link.href}
