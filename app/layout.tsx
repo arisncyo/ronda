@@ -9,7 +9,7 @@ const afacad = Afacad({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://ronda-cctv.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ronda-cctv.vercel.app";
 
 export const metadata: Metadata = {
   title: {
