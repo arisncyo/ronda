@@ -21,6 +21,9 @@ export async function generateMetadata({
   return {
     title: `${product.name} ${product.brand}`,
     description: `${product.description} Harga ${product.hasPrice ? product.price : "hubungi kami"}. Produk CCTV ${product.category} dari ${product.brand} — tersedia di Ronda CCTV.`,
+    alternates: {
+      canonical: `${siteUrl}/katalog/${slug}`,
+    },
     openGraph: {
       title: `${product.name} ${product.brand} | Ronda CCTV`,
       description: product.description,
@@ -30,12 +33,15 @@ export async function generateMetadata({
   };
 }
 
-function ProductJsonLd({ product }: { product: Product }) {
+function ProductJsonLd({ product, slug }: { product: Product; slug: string }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${siteUrl}/katalog/${slug}#product`,
     name: `${product.name} ${product.brand}`,
     description: product.description,
+    url: `${siteUrl}/katalog/${slug}`,
+    mainEntityOfPage: `${siteUrl}/katalog/${slug}`,
     brand: { "@type": "Brand", name: product.brand },
     category: product.category,
     image: product.imageUrl,
@@ -44,7 +50,9 @@ function ProductJsonLd({ product }: { product: Product }) {
         "@type": "Offer",
         price: product.price?.replace(/[^0-9]/g, ""),
         priceCurrency: "IDR",
+        priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
         availability: "https://schema.org/InStock",
+        url: `${siteUrl}/katalog/${slug}`,
       },
     }),
   };
@@ -115,7 +123,7 @@ export default async function ProductDetailPage({
 
   return (
     <>
-      <ProductJsonLd product={product} />
+      <ProductJsonLd product={product} slug={slug} />
       <BreadcrumbJsonLd product={product} />
 
       <main className="min-h-screen bg-[#f8fafc] pt-[70px] pb-16">

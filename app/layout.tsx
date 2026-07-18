@@ -72,7 +72,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   alternates: {
     canonical: siteUrl,
@@ -82,6 +83,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": `${siteUrl}/#business`,
   name: "Ronda CCTV",
   description:
     "Layanan pemasangan CCTV profesional untuk rumah, kantor, gudang, dan kawasan industri di Surabaya, Sidoarjo, Gresik.",
@@ -89,8 +91,9 @@ const jsonLd = {
   telephone: process.env.NEXT_PUBLIC_WHATSAPP?.replace(/^62/, "+62") || "+628000000000",
   email: "info@rondacctv.com",
   image: `${siteUrl}/hero.png`,
+  logo: `${siteUrl}/favicon.svg`,
   areaServed: ["Surabaya", "Sidoarjo", "Gresik"],
-  priceRange: "Rp",
+  priceRange: "Rp2.399.000 - Rp12.499.000",
   openingHours: "Mo-Su 08:00-20:00",
   address: {
     "@type": "PostalAddress",

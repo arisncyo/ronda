@@ -71,7 +71,9 @@ export default function ArtikelPage() {
 
       <section className="max-w-6xl mx-auto px-4">
         {filteredArticles.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <>
+            <h2 className="sr-only">Daftar Artikel</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {filteredArticles.map((article) => (
               <Link
                 key={article.id}
@@ -114,6 +116,7 @@ export default function ArtikelPage() {
               </Link>
             ))}
           </div>
+          </>
         ) : (
           <div className="bg-white rounded-2xl p-12 text-center border border-border shadow-sm">
             <svg className="w-16 h-16 text-slate-300 mx-auto mb-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" aria-hidden="true">
@@ -133,9 +136,9 @@ export default function ArtikelPage() {
       <section className="max-w-6xl mx-auto px-4 mt-16">
         <div className="relative rounded-3xl bg-gradient-to-r from-primary to-secondary text-white p-8 md:p-12 overflow-hidden shadow-lg">
           <div className="relative z-10 max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl sm:text-3xl font-black mb-3">
+            <h2 className="text-2xl sm:text-3xl font-black mb-3">
               Ingin Meningkatkan Keamanan Properti Anda?
-            </h3>
+            </h2>
             <p className="text-white/80 text-sm sm:text-base mb-6 leading-relaxed">
               Tim ahli kami siap membantu Anda melakukan survey lokasi,
               merekomendasikan titik pemasangan kamera, dan memberikan estimasi

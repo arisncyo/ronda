@@ -21,6 +21,9 @@ export async function generateMetadata({
   return {
     title: article.title,
     description: article.summary,
+    alternates: {
+      canonical: `${siteUrl}/artikel/${slug}`,
+    },
     openGraph: {
       title: `${article.title} | Ronda CCTV`,
       description: article.summary,
@@ -31,13 +34,16 @@ export async function generateMetadata({
   };
 }
 
-function ArticleJsonLd({ article }: { article: Article }) {
+function ArticleJsonLd({ article, slug }: { article: Article; slug: string }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${siteUrl}/artikel/${slug}#article`,
     headline: article.title,
     description: article.summary,
     image: article.imageUrl,
+    url: `${siteUrl}/artikel/${slug}`,
+    mainEntityOfPage: `${siteUrl}/artikel/${slug}`,
     datePublished: article.date,
     author: { "@type": "Organization", name: "Ronda CCTV" },
     publisher: { "@type": "Organization", name: "Ronda CCTV" },
@@ -75,7 +81,7 @@ export default async function ArticleDetailPage({
 
   return (
     <>
-      <ArticleJsonLd article={article} />
+      <ArticleJsonLd article={article} slug={slug} />
       <BreadcrumbJsonLd article={article} />
 
       <main className="min-h-screen bg-[#f8fafc] pt-[70px] pb-16">
@@ -138,9 +144,9 @@ export default async function ArticleDetailPage({
 
               <div className="mt-10 pt-8 border-t border-[#eef2f6] flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#f8fafc] rounded-2xl p-6">
                 <div>
-                  <h4 className="text-sm font-bold text-[#042327]">
+                  <p className="text-sm font-bold text-[#042327]">
                     Butuh solusi untuk CCTV Anda?
-                  </h4>
+                  </p>
                   <p className="text-xs text-[#50595A] mt-0.5">
                     Hubungi kami untuk survey lokasi dan konsultasi gratis.
                   </p>

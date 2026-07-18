@@ -27,7 +27,7 @@ export default function TentangSection() {
 <span
             className="text-3xl font-bold text-primary"
           >
-            100+
+            50+
           </span>
                 <p className="text-sm mt-1 text-body">
                   Proyek Selesai
@@ -37,7 +37,7 @@ export default function TentangSection() {
 <span
             className="text-3xl font-bold text-primary"
           >
-            2+
+            1+
           </span>
                 <p className="text-sm mt-1 text-body">
                   Tahun Pengalaman

@@ -87,7 +87,9 @@ export default function KatalogPage() {
 
       <section className="max-w-6xl mx-auto px-4">
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <>
+            <h2 className="sr-only">Daftar Produk CCTV</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
@@ -144,6 +146,7 @@ export default function KatalogPage() {
               </div>
             ))}
           </div>
+          </>
         ) : (
           <div className="bg-white rounded-2xl p-12 text-center border border-border shadow-sm">
             <span className="text-5xl mb-4 block">🔍</span>
@@ -160,9 +163,9 @@ export default function KatalogPage() {
       <section className="max-w-6xl mx-auto px-4 mt-16">
         <div className="relative rounded-3xl bg-gradient-to-r from-primary to-primary-dark text-white p-8 md:p-12 overflow-hidden shadow-lg">
           <div className="relative z-10 text-center max-w-xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-black mb-3">
+            <h2 className="text-2xl sm:text-3xl font-black mb-3">
               Butuh Bantuan Memilih?
-            </h3>
+            </h2>
             <p className="text-white/80 text-sm sm:text-base mb-6 leading-relaxed">
               Kami siap membantu Anda memilih produk yang sesuai. Konsultasi gratis!
             </p>
