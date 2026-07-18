@@ -136,7 +136,7 @@ export default function PaketSection() {
               </ul>
 
               <a
-                href={`https://wa.me/628000000000?text=Halo%20Ronda%20CCTV,%20saya%20tertarik%20dengan%20${encodeURIComponent(paket.name)}.%20Mohon%20info%20lebih%20lanjut.`}
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=Halo%20Ronda%20CCTV,%20saya%20tertarik%20dengan%20${encodeURIComponent(paket.name)}.%20Mohon%20info%20lebih%20lanjut.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block font-[family-name:var(--font-afacad)] text-base font-bold text-white py-3 rounded-xl no-underline transition-all duration-300 text-center bg-primary hover:bg-secondary"

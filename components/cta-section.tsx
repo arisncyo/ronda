@@ -9,7 +9,7 @@ export default function CtaSection() {
           Konsultasi gratis via WhatsApp — respon cepat, solusi tepat
         </p>
         <a
-          href="https://wa.me/628000000000"
+          href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2.5 font-[family-name:var(--font-afacad)] text-[19px] font-bold text-white no-underline px-10 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 bg-success shadow-[0_8px_24px_rgba(37,211,102,0.3)]"

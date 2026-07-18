@@ -20,7 +20,7 @@ export default function NotFound() {
           Beranda
         </Link>
         <a
-          href="https://wa.me/628000000000"
+          href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 bg-success hover:bg-success-dark text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-300 no-underline shadow-[0_4px_12px_rgba(37,211,102,0.3)]"

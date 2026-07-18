@@ -146,7 +146,7 @@ export default async function ArticleDetailPage({
                   </p>
                 </div>
                 <a
-                  href={`https://wa.me/628000000000?text=Halo%20Ronda%20CCTV,%20saya%20membaca%20artikel%20"${encodeURIComponent(article.title)}"%20dan%20ingin%20tanya%20mengenai%20layanan%20CCTV.`}
+                  href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=Halo%20Ronda%20CCTV,%20saya%20membaca%20artikel%20"${encodeURIComponent(article.title)}"%20dan%20ingin%20tanya%20mengenai%20layanan%20CCTV.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#1888CD] hover:bg-[#042327] text-white font-bold text-sm px-6 py-3 rounded-xl transition-all duration-300 no-underline whitespace-nowrap"

@@ -22,7 +22,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://wa.me/628000000000"
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 font-sans text-[17px] font-bold px-7 py-4 rounded-xl transition-all duration-300 no-underline bg-white text-secondary hover:bg-slate-100 hover:scale-[1.03] hover:shadow-lg hover:shadow-sky-500/10 active:scale-95"

@@ -167,7 +167,7 @@ export default function KatalogPage() {
               Kami siap membantu Anda memilih produk yang sesuai. Konsultasi gratis!
             </p>
             <a
-              href="https://wa.me/628000000000"
+              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-primary font-bold text-base px-8 py-3.5 rounded-2xl transition-all duration-300 no-underline shadow-lg"

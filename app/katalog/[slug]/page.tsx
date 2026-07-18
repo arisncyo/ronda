@@ -200,7 +200,7 @@ export default async function ProductDetailPage({
                   )}
                 </div>
                 <a
-                  href={`https://wa.me/628000000000?text=Halo%20Ronda%20CCTV,%20saya%20tertarik%20dengan%20${encodeURIComponent(product.name)}%20dan%20ingin%20tanya%20lebih%20lanjut.%0A%0AProduk:%20${encodeURIComponent(product.name)}%0AMerek:%20${encodeURIComponent(product.brand)}%0AKategori:%20${encodeURIComponent(product.category)}%0AHarga:%20${encodeURIComponent(product.hasPrice ? product.price || "" : "Hubungi untuk harga")}`}
+                  href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=Halo%20Ronda%20CCTV,%20saya%20tertarik%20dengan%20${encodeURIComponent(product.name)}%20dan%20ingin%20tanya%20lebih%20lanjut.%0A%0AProduk:%20${encodeURIComponent(product.name)}%0AMerek:%20${encodeURIComponent(product.brand)}%0AKategori:%20${encodeURIComponent(product.category)}%0AHarga:%20${encodeURIComponent(product.hasPrice ? product.price || "" : "Hubungi untuk harga")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold text-base px-6 py-3.5 rounded-2xl transition-all duration-300 no-underline shadow-lg shadow-[#25D366]/25 ml-auto"
@@ -277,7 +277,7 @@ export default async function ProductDetailPage({
                 kebutuhan, luas area, dan budget. Gratis!
               </p>
               <a
-                href={`https://wa.me/628000000000?text=Halo%20Ronda%20CCTV,%20saya%20tertarik%20dengan%20${encodeURIComponent(product.name)}%20dan%20ingin%20konsultasi.%20Mohon%20bantuannya.`}
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=Halo%20Ronda%20CCTV,%20saya%20tertarik%20dengan%20${encodeURIComponent(product.name)}%20dan%20ingin%20konsultasi.%20Mohon%20bantuannya.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold text-base px-8 py-3.5 rounded-2xl transition-all duration-300 no-underline shadow-lg shadow-[#25D366]/30"

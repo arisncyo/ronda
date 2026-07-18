@@ -95,7 +95,7 @@ const jsonLd = {
     addressRegion: "Jawa Timur",
     addressCountry: "ID",
   },
-  sameAs: ["https://wa.me/628000000000"],
+  sameAs: [`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`],
 };
 
 export default function RootLayout({

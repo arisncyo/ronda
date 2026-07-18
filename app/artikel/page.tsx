@@ -143,7 +143,7 @@ export default function ArtikelPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://wa.me/628000000000"
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-secondary hover:bg-slate-100 font-bold text-sm sm:text-base px-6 py-3 rounded-xl transition-all duration-300 no-underline shadow-md"
