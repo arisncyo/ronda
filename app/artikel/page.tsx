@@ -73,18 +73,40 @@ export default function ArtikelPage() {
             ))}
           </div>
           <div className="relative w-full md:w-72">
-            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637z" />
-              </svg>
-            </span>
-            <input
-              type="text"
-              placeholder="Cari artikel..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-slate-100 text-secondary rounded-xl border border-transparent focus:border-primary focus:bg-white outline-none transition-all duration-300 text-sm font-medium"
-            />
+            <form
+              role="search"
+              toolname="searchArticles"
+              tooldescription="Search and filter articles by title or summary"
+              toolautosubmit="true"
+              action="/artikel"
+              method="GET"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const data = new FormData(form);
+                const q = data.get("q") as string;
+                if (q) setSearchQuery(q);
+                const ne = e.nativeEvent as SubmitEvent & { agentInvoked?: boolean; respondWith?(p: Promise<string>): void };
+                if (ne.agentInvoked && ne.respondWith) {
+                  ne.respondWith(Promise.resolve(`Articles filtered for: ${q}`));
+                }
+              }}
+            >
+              <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637z" />
+                </svg>
+              </span>
+              <input
+                type="text"
+                name="q"
+                placeholder="Cari artikel..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                toolparamdescription="Search query for article title or summary"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-100 text-secondary rounded-xl border border-transparent focus:border-primary focus:bg-white outline-none transition-all duration-300 text-sm font-medium"
+              />
+            </form>
           </div>
         </div>
       </section>
@@ -100,7 +122,7 @@ export default function ArtikelPage() {
                 href={`/artikel/${article.slug}`}
                 className="group bg-white rounded-xl overflow-hidden border border-border hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 no-underline flex flex-col"
               >
-                <div className="relative h-32 w-full bg-slate-100 overflow-hidden">
+                <div className="relative w-full bg-slate-100 overflow-hidden aspect-[16/9]">
                   <img
                     src={article.imageUrl}
                     alt={article.title}
@@ -180,6 +202,40 @@ export default function ArtikelPage() {
                 Lihat Paket CCTV
               </Link>
             </div>
+            <form
+              toolname="consultationViaWhatsApp"
+              tooldescription="Send a consultation request via WhatsApp to Ronda CCTV"
+              toolautosubmit="true"
+              action={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
+              method="GET"
+              className="flex flex-wrap items-center justify-center gap-2 mt-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const data = new FormData(form);
+                const text = data.get("text") as string;
+                const whatsappUrl = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=${encodeURIComponent(text || "Halo Ronda CCTV, saya ingin konsultasi.")}`;
+                window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+                const ne = e.nativeEvent as SubmitEvent & { agentInvoked?: boolean; respondWith?(p: Promise<string>): void };
+                if (ne.agentInvoked && ne.respondWith) {
+                  ne.respondWith(Promise.resolve(`WhatsApp consultation opened with message: ${text}`));
+                }
+              }}
+            >
+              <input
+                type="text"
+                name="text"
+                placeholder="Pesan konsultasi..."
+                toolparamdescription="The consultation message to send via WhatsApp"
+                className="px-4 py-3 rounded-xl text-sm text-secondary border-0 outline-none min-w-[200px]"
+              />
+              <button
+                type="submit"
+                className="bg-success text-white font-bold text-sm px-6 py-3 rounded-xl border-0 cursor-pointer hover:opacity-90 transition-opacity"
+              >
+                Kirim
+              </button>
+            </form>
           </div>
         </div>
         </section>

@@ -23,6 +23,8 @@ export default function BrandStrip() {
               key={brand.src}
               src={brand.src}
               alt={brand.alt}
+              width={90}
+              height={36}
               className="h-9 w-auto opacity-50 transition-all duration-300 grayscale contrast-[0.8] hover:opacity-100 hover:scale-105 hover:grayscale-0 hover:contrast-100"
             />
           ))}

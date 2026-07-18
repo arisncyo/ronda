@@ -50,6 +50,8 @@ export default function TentangSection() {
               <img
                 src="/hero.png"
                 alt="Tim teknisi CCTV"
+                width={400}
+                height={300}
                 className="w-full h-auto object-cover"
                 style={{ maxHeight: 380 }}
               />

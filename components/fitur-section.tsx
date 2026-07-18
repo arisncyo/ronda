@@ -100,6 +100,8 @@ export default function FiturSection() {
               <img
                 src="/akses-cctv-online.png"
                 alt="Akses CCTV Online"
+                width={600}
+                height={400}
                 className="w-full max-w-lg h-auto"
               />
             </div>

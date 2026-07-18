@@ -72,18 +72,40 @@ export default function KatalogPage() {
             ))}
           </div>
           <div className="relative w-full md:w-72">
-            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637z" />
-              </svg>
-            </span>
-            <input
-              type="text"
-              placeholder="Cari produk atau merek..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-slate-100 text-secondary rounded-xl border border-transparent focus:border-primary focus:bg-white outline-none transition-all duration-300 text-sm font-medium"
-            />
+            <form
+              role="search"
+              toolname="searchProducts"
+              tooldescription="Search and filter CCTV products by name, brand, or description"
+              toolautosubmit="true"
+              action="/katalog"
+              method="GET"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const data = new FormData(form);
+                const q = data.get("q") as string;
+                if (q) setSearchQuery(q);
+                const ne = e.nativeEvent as SubmitEvent & { agentInvoked?: boolean; respondWith?(p: Promise<string>): void };
+                if (ne.agentInvoked && ne.respondWith) {
+                  ne.respondWith(Promise.resolve(`Products filtered for: ${q}`));
+                }
+              }}
+            >
+              <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637z" />
+                </svg>
+              </span>
+              <input
+                type="text"
+                name="q"
+                placeholder="Cari produk atau merek..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                toolparamdescription="Search query for product name, brand, or description"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-100 text-secondary rounded-xl border border-transparent focus:border-primary focus:bg-white outline-none transition-all duration-300 text-sm font-medium"
+              />
+            </form>
           </div>
         </div>
         <div className="bg-white rounded-2xl p-4 border border-border flex flex-wrap gap-2 items-center justify-center mt-4">
@@ -119,7 +141,7 @@ export default function KatalogPage() {
                   href={`/katalog/${product.slug}`}
                   className="no-underline"
                 >
-                  <div className="relative h-40 w-full bg-slate-100 overflow-hidden">
+                  <div className="relative w-full bg-slate-100 overflow-hidden aspect-[4/3]">
                     <img
                       src={product.imageUrl}
                       alt={product.name}
@@ -189,17 +211,53 @@ export default function KatalogPage() {
             <p className="text-white/80 text-sm sm:text-base mb-6 leading-relaxed">
               Kami siap membantu Anda memilih produk yang sesuai. Konsultasi gratis!
             </p>
-            <a
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-primary font-bold text-base px-8 py-3.5 rounded-2xl transition-all duration-300 no-underline shadow-lg"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
-              </svg>
-              Konsultasi Gratis via WhatsApp
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-primary font-bold text-base px-8 py-3.5 rounded-2xl transition-all duration-300 no-underline shadow-lg"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                </svg>
+                Konsultasi Gratis via WhatsApp
+              </a>
+              <form
+                toolname="consultationViaWhatsApp"
+                tooldescription="Send a consultation request via WhatsApp to Ronda CCTV"
+              toolautosubmit="true"
+                action={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
+                method="GET"
+                className="flex flex-wrap items-center gap-2"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const form = e.currentTarget;
+                  const data = new FormData(form);
+                  const text = data.get("text") as string;
+                  const whatsappUrl = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=${encodeURIComponent(text || "Halo Ronda CCTV, saya ingin konsultasi.")}`;
+                  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+                  const ne = e.nativeEvent as SubmitEvent & { agentInvoked?: boolean; respondWith?(p: Promise<string>): void };
+                  if (ne.agentInvoked && ne.respondWith) {
+                    ne.respondWith(Promise.resolve(`WhatsApp consultation opened with message: ${text}`));
+                  }
+                }}
+              >
+                <input
+                  type="text"
+                  name="text"
+                  placeholder="Pesan konsultasi..."
+                  toolparamdescription="The consultation message to send via WhatsApp"
+                  className="px-4 py-3 rounded-xl text-sm text-secondary border-0 outline-none min-w-[200px]"
+                />
+                <button
+                  type="submit"
+                  className="bg-success text-white font-bold text-sm px-6 py-3 rounded-xl border-0 cursor-pointer hover:opacity-90 transition-opacity"
+                >
+                  Kirim
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         </section>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Afacad } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import WebMCPRegistry from "@/components/webmcp-registry";
 import "./globals.css";
 
 const afacad = Afacad({
@@ -138,6 +139,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans text-lg antialiased text-body">
+        <WebMCPRegistry />
         <Navbar />
         {children}
         <Footer />

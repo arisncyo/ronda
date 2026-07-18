@@ -113,7 +113,7 @@ export default async function ArticleDetailPage({
           </Link>
 
           <article className="bg-white rounded-3xl overflow-hidden border border-[#eef2f6] shadow-sm">
-            <div className="relative h-64 sm:h-80 w-full bg-slate-100">
+            <div className="relative w-full bg-slate-100 aspect-video">
               <img
                 src={article.imageUrl}
                 alt={article.title}
@@ -178,7 +178,7 @@ export default async function ArticleDetailPage({
                   href={`/artikel/${related.slug}`}
                   className="group bg-white rounded-2xl overflow-hidden border border-[#eef2f6] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 no-underline"
                 >
-                  <div className="relative h-40 w-full bg-slate-100 overflow-hidden">
+                  <div className="relative w-full bg-slate-100 overflow-hidden aspect-[4/3]">
                     <img
                       src={related.imageUrl}
                       alt={related.title}

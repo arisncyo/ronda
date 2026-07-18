@@ -248,7 +248,7 @@ export default async function ProductDetailPage({
                   href={`/katalog/${related.slug}`}
                   className="group bg-white rounded-2xl overflow-hidden border border-[#eef2f6] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 no-underline"
                 >
-                  <div className="relative h-36 w-full bg-slate-100 overflow-hidden">
+                  <div className="relative w-full bg-slate-100 overflow-hidden aspect-[4/3]">
                     <img
                       src={related.imageUrl}
                       alt={related.name}
