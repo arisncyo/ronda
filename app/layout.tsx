@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Ronda CCTV",
   },
   description:
-    "Jasa pemasangan CCTV profesional di Surabaya, Sidoarjo, Gresik & sekitarnya. Gratis konsultasi, garansi resmi, teknisi bersertifikasi. Harga mulai Rp1.899.000.",
+      "Layanan pemasangan CCTV profesional untuk rumah, kantor, gudang, dan kawasan industri di Surabaya, Sidoarjo, Gresik. Gratis konsultasi, garansi resmi, dikerjakan teknisi berpengalaman.",
   keywords: [
     "jasa pemasangan CCTV",
     "pasang CCTV Surabaya",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title:
       "Ronda CCTV | Jasa Pemasangan CCTV Profesional Surabaya Sidoarjo Gresik",
     description:
-      "Jasa pemasangan CCTV profesional di Surabaya, Sidoarjo, Gresik & sekitarnya. Gratis konsultasi, garansi resmi, teknisi bersertifikasi.",
+    "Layanan pemasangan CCTV profesional untuk rumah, kantor, gudang, dan kawasan industri di Surabaya, Sidoarjo, Gresik. Gratis konsultasi, garansi resmi, dikerjakan teknisi berpengalaman.",
     url: siteUrl,
     images: [
       {
@@ -84,7 +84,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Ronda CCTV",
   description:
-    "Jasa pemasangan CCTV profesional di Surabaya, Sidoarjo, Gresik & sekitarnya.",
+    "Layanan pemasangan CCTV profesional untuk rumah, kantor, gudang, dan kawasan industri di Surabaya, Sidoarjo, Gresik.",
   url: siteUrl,
   telephone: process.env.NEXT_PUBLIC_WHATSAPP?.replace(/^62/, "+62") || "+628000000000",
   email: "info@rondacctv.com",
