@@ -21,8 +21,28 @@ export default function KatalogPage() {
     return matchesCategory && matchesBrand && matchesSearch;
   });
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ronda-cctv.vercel.app";
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${siteUrl}/katalog#itemlist`,
+    name: "Katalog Produk CCTV",
+    description: "Daftar lengkap produk CCTV, aksesoris, dan paket pemasangan dari Ronda CCTV.",
+    url: `${siteUrl}/katalog`,
+    numberOfItems: filteredProducts.length,
+    itemListElement: filteredProducts.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${siteUrl}/katalog/${product.slug}`,
+      name: `${product.name} ${product.brand}`,
+    })),
+  };
+
   return (
-    <main className="min-h-screen bg-surface pt-[70px] pb-16">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+      <main className="min-h-screen bg-surface pt-[70px] pb-16">
       <section className="bg-primary text-white py-14 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3">
@@ -182,7 +202,8 @@ export default function KatalogPage() {
             </a>
           </div>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

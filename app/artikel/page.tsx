@@ -20,8 +20,28 @@ export default function ArtikelPage() {
     return matchesCategory && matchesSearch;
   });
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ronda-cctv.vercel.app";
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${siteUrl}/artikel#itemlist`,
+    name: "Artikel & Edukasi Keamanan CCTV",
+    description: "Tips, panduan, dan informasi teknologi CCTV terbaru dari Ronda CCTV.",
+    url: `${siteUrl}/artikel`,
+    numberOfItems: filteredArticles.length,
+    itemListElement: filteredArticles.map((article, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${siteUrl}/artikel/${article.slug}`,
+      name: article.title,
+    })),
+  };
+
   return (
-    <main className="min-h-screen bg-surface pt-[70px] pb-16">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+      <main className="min-h-screen bg-surface pt-[70px] pb-16">
       <section className="bg-primary text-white py-14 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3">
@@ -162,7 +182,8 @@ export default function ArtikelPage() {
             </div>
           </div>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

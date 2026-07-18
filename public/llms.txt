@@ -1,0 +1,68 @@
+# Ronda CCTV
+
+> Penyedia jasa pemasangan CCTV profesional untuk rumah, kantor, gudang, dan kawasan industri di Surabaya, Sidoarjo, Gresik dan sekitarnya. Gratis konsultasi, garansi resmi, dikerjakan teknisi berpengalaman.
+
+## Halaman Utama
+
+- [Beranda](/) — Halaman utama dengan paket terlaris, layanan, dan informasi perusahaan
+- [Katalog Produk](/katalog) — Semua produk CCTV, aksesoris, dan paket pemasangan
+- [Artikel](/artikel) — Tips, panduan, dan informasi seputar CCTV dan keamanan
+
+## Layanan
+
+- [Instalasi CCTV](/#layanan) — Pemasangan kamera indoor/outdoor dengan jalur kabel rapi
+- [Upgrade Sistem](/#layanan) — Tambah channel, upgrade resolusi, perbarui DVR/NVR
+- [Maintenance](/#layanan) — Cek berkala, bersihkan lensa, perbaikan sistem
+- [Konsultasi Keamanan](/#layanan) — Survey lokasi, rekomendasi sistem dan tata letak optimal
+
+## Paket Pemasangan
+
+- [Paket 4 Channel Hemat](/katalog/paket-4-kamera-hemat) — 2 kamera + DVR + HDD 500GB, Rp2.399.000
+- [Paket 4 Channel Terlaris](/#paket) — 4 kamera + DVR + HDD 1TB, Rp4.799.000
+- [Paket 8 Channel Bisnis](/#paket) — 8 kamera + NVR + HDD 2TB, Rp12.499.000
+
+## Produk
+
+### Kamera CCTV
+
+- [Kamera Dome 2MP IR Hikvision](/katalog/kamera-dome-2mp-ir) — Rp850.000 — Dome 2MP night vision 30m, indoor
+- [Kamera Bullet 4MP Dahua](/katalog/kamera-bullet-4mp) — Rp1.450.000 — Full Color night vision, outdoor
+- [Kamera Mini WiFi 2MP HiLook](/katalog/kamera-mini-wifi-2mp) — Rp499.000 — WiFi, pasang sendiri via smartphone
+- [Kamera Bullet 8MP 4K Hikvision](/katalog/kamera-bullet-8mp-4k) — 4K AcuSense AI, deteksi manusia & kendaraan
+- [IP Camera PTZ 5MP Uniview](/katalog/ip-camera-ptz-5mp) — PTZ 360°, zoom optik 25x, Smart Tracking
+
+### Rekaman
+
+- [NVR 8 Channel Hikvision](/katalog/nvr-8-channel) — Rp2.899.000 — 8 channel IP, H.265+, HDD up to 10TB
+- [DVR 16 Channel Dahua](/katalog/dvr-16-channel) — Rp3.750.000 — 16 channel AHD, AI motion detection
+
+### Aksesoris
+
+- [Hard Disk CCTV 4TB WD Purple](/katalog/hard-disk-cctv-4tb) — Rp1.550.000 — Khusus CCTV 24/7, garansi 3 tahun
+- [Switch PoE 8 Port TP-Link](/katalog/switch-poe-8-port) — Rp650.000 — 8 port PoE+, 120W, plug and play
+- [Kabel Coaxial RG6 50m Belden](/katalog/kabel-coaxial-rg6-50m) — Rp350.000 — Double shielding, BNC siap pakai
+
+### Paket Lengkap
+
+- [Paket 4 Kamera Hemat](/katalog/paket-4-kamera-hemat) — Rp2.599.000 — 4 kamera + DVR + HDD 1TB + instalasi
+- [Paket 8 Kamera IP](/katalog/paket-8-kamera-ip) — Rp6.499.000 — 8 IP camera + NVR + HDD 2TB + PoE Switch
+
+## Artikel
+
+- [5 Cara Memilih CCTV untuk Rumah Anda](/artikel/5-cara-memilih-cctv-yang-tepat-untuk-rumah-anda)
+- [IP Camera vs CCTV Analog: Mana yang Lebih Baik?](/artikel/ip-camera-vs-cctv-analog-mana-yang-lebih-baik)
+- [Panduan Perawatan CCTV agar Berumur Panjang](/artikel/panduan-perawatan-cctv-agar-berumur-panjang)
+- [Pentingnya Memasang CCTV Online di Tempat Usaha](/artikel/pentingnya-memasang-cctv-online-di-tempat-usaha)
+
+## Informasi Perusahaan
+
+- Nama: Ronda CCTV
+- Layanan: Surabaya, Sidoarjo, Gresik & sekitarnya
+- WhatsApp: https://wa.me/628176655959
+- Email: info@rondacctv.com
+- Jam Operasional: Senin-Minggu, 08:00-20:00
+
+## Optional
+
+- [Lihat Paket Terlaris](/#paket) — Harga sudah termasuk biaya pemasangan & bergaransi
+- [Konsultasi Gratis](https://wa.me/628176655959) — Tanya-tanya dulu, tanpa biaya

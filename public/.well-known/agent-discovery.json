@@ -1,0 +1,38 @@
+{
+  "name": "Ronda CCTV",
+  "description": "Penyedia jasa pemasangan CCTV profesional di Surabaya, Sidoarjo, Gresik.",
+  "url": "https://rondacctv.com",
+  "capabilities": [
+    {
+      "type": "llms-txt",
+      "url": "https://rondacctv.com/llms.txt",
+      "description": "Curated index for AI agents — all pages, products, articles, and services"
+    },
+    {
+      "type": "llms-full-txt",
+      "url": "https://rondacctv.com/llms-full.txt",
+      "description": "Full content corpus for RAG — complete product specs, articles, pricing, and FAQ"
+    },
+    {
+      "type": "json-ld",
+      "description": "Schema.org structured data: WebSite, LocalBusiness, Product, Article, ItemList, BreadcrumbList, FAQPage"
+    },
+    {
+      "type": "webmcp",
+      "description": "Semantic HTML with data-element-name attributes for Web Model Context Protocol (Chrome origin trial)"
+    },
+    {
+      "type": "sitemap",
+      "url": "https://rondacctv.com/sitemap.xml"
+    }
+  ],
+  "categories": [
+    "CCTV Installation",
+    "Security Camera",
+    "Home Security",
+    "Surabaya",
+    "Indonesia"
+  ],
+  "preferredPrefix": "ronda",
+  "updated": "2026-07-18T00:00:00Z"
+}

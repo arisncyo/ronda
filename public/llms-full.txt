@@ -1,0 +1,114 @@
+# Ronda CCTV — Profil Lengkap
+
+## Informasi Perusahaan
+
+Ronda CCTV adalah penyedia jasa pemasangan CCTV profesional yang mencakup area Surabaya, Sidoarjo, Gresik, dan sekitarnya. Kami melayani pemasangan kamera CCTV untuk rumah tinggal, kantor, ruko, gudang, pabrik, kawasan industri, perumahan, apartemen, dan area publik. Gratis survei lokasi dan konsultasi.
+
+Kontak:
+- WhatsApp: https://wa.me/628176655959
+- Area layanan: Surabaya, Sidoarjo, Gresik dan sekitarnya
+- Jam operasional: Senin-Minggu, 08:00-20:00
+- Email: info@rondacctv.com
+
+## Layanan Kami
+
+### Instalasi CCTV
+Pemasangan kamera CCTV indoor dan outdoor sesuai standar keamanan. Termasuk penarikan kabel rapi, setup DVR/NVR, konfigurasi remote viewing via smartphone. Cocok untuk pemasangan baru maupun tambahan kamera pada sistem existing. Dikerjakan oleh teknisi berpengalaman dengan garansi resmi.
+
+### Upgrade Sistem
+Tambah jumlah channel (4→8→16), upgrade resolusi kamera (2MP→4MP→4K), perbarui DVR lama ke NVR IP, atau tambah kapasitas penyimpanan HDD. Kami bantu evaluasi sistem lama dan rekomendasi upgrade yang tepat sesuai kebutuhan dan budget.
+
+### Maintenance
+Layanan perawatan berkala meliputi: cek fungsi kamera, bersihkan lensa dari debu/sarang laba-laba, periksa koneksi kabel, update firmware DVR/NVR, backup footage penting, dan perbaikan jika ada kerusakan. Tersedia paket bulanan dan tahunan.
+
+### Konsultasi Keamanan
+Survey lokasi langsung oleh tenaga ahli. Kami rekomendasikan tipe kamera yang tepat (dome/bullet/PTZ), jumlah kamera, posisi pemasangan strategis, tipe rekaman (DVR/NVR), kapasitas HDD, dan sistem monitoring. Gratis tanpa biaya.
+
+## Produk & Harga
+
+### Kamera CCTV
+
+**Kamera Dome 2MP IR Hikvision**
+Harga: Rp850.000
+Spesifikasi: Resolusi 2MP (1920×1080), night vision IR 30 meter, indoor, lensa fixed 2.8mm, koneksi BNC (analog). Cocok untuk ruangan kantor, toko, rumah.
+
+**Kamera Bullet 4MP Dahua**
+Harga: Rp1.450.000
+Spesifikasi: Resolusi 4MP, Full Color night vision, outdoor IP67, built-in microphone, koneksi BNC, teknologi Starlight untuk malam hari. Cocok untuk area outdoor seperti halaman, parkir, gudang.
+
+**Kamera Mini WiFi 2MP HiLook**
+Harga: Rp499.000
+Spesifikasi: Resolusi 2MP, WiFi 2.4GHz, wireless, aplikasi Hik-Connect, deteksi gerak bawaan, slot microSD 128GB. Cocok untuk pemakaian rumahan indoor, pasang sendiri via smartphone.
+
+**Kamera Bullet 8MP 4K Hikvision**
+Harga: Hubungi untuk harga
+Spesifikasi: Resolusi 8MP (3840×2160) 4K Ultra HD, AcuSense AI (deteksi manusia & kendaraan), outdoor, IP67, night vision 50 meter, koneksi BNC. Cocok untuk area luas yang butuh detail tinggi.
+
+**IP Camera PTZ 5MP Uniview**
+Harga: Hubungi untuk harga
+Spesifikasi: Resolusi 5MP, PTZ 360° continuous, optical zoom 25x, Smart Tracking otomatis, PoE, outdoor IP66, night vision IR 100 meter, koneksi IP/RJ45. Cocok untuk area luas seperti gudang, lapangan parkir, pabrik.
+
+### Rekaman (DVR/NVR)
+
+**NVR 8 Channel Hikvision**
+Harga: Rp2.899.000
+Spesifikasi: 8 channel IP, H.265+ compression, HDD up to 10TB, PoE built-in 8 port, output HDMI 4K, support remote viewing via Hik-Connect.
+
+**DVR 16 Channel Dahua**
+Harga: Rp3.750.000
+Spesifikasi: 16 channel AHD/TVI/CVI/Analog, AI IVS (intelligent video surveillance), HDD up to 10TB, output HDMI/VGA, support remote viewing.
+
+### Aksesoris CCTV
+
+**Hard Disk CCTV 4TB WD Purple**
+Harga: Rp1.550.000
+Spesifikasi: 4TB, 5400RPM, SATA 3.5", AllFrame technology, garansi 3 tahun, khusus untuk CCTV 24/7 nonstop.
+
+**Switch PoE 8 Port TP-Link**
+Harga: Rp650.000
+Spesifikasi: 8 port PoE+ (802.3af/at), total budget 120W, plug and play, desktop/rackmount, port uplink 1Gbps.
+
+**Kabel Coaxial RG6 50m Belden**
+Harga: Rp350.000
+Spesifikasi: 50 meter, double shielding (braid + foil), BNC connector siap pakai di kedua ujung.
+
+### Paket Lengkap
+
+**Paket 4 Kamera Hemat**
+Harga: Rp2.599.000
+Termasuk: 4 kamera dome/bullet, DVR 4 channel, HDD 1TB, kabel, konektor, power supply, instalasi oleh teknisi. Cocok untuk toko kecil / rumah type 45.
+
+**Paket 8 Kamera IP**
+Harga: Rp6.499.000
+Termasuk: 8 IP camera, NVR 8 channel PoE, HDD 2TB, switch PoE, kabel UTP, konektor RJ45, instalasi, konfigurasi remote viewing. Cocok untuk kantor / ruko / gudang.
+
+## Artikel / Blog
+
+### 5 Cara Memilih CCTV untuk Rumah Anda
+Tips panduan memilih CCTV untuk rumah tinggal: tentukan kebutuhan (indoor/outdoor), pilih resolusi minimal 2MP, perhatikan fitur night vision, pilih kapasitas penyimpanan minimal 1TB, dan pastikan garansi resmi. Baca selengkapnya di: /artikel/5-cara-memilih-cctv-yang-tepat-untuk-rumah-anda
+
+### IP Camera vs CCTV Analog: Mana yang Lebih Baik?
+Perbandingan lengkap IP camera vs analog: IP camera unggul di resolusi (4MP-4K), fitur AI, dan kemudahan instalasi via PoE. CCTV analog lebih terjangkau untuk budget terbatas dan cocok untuk upgrade dari sistem lama. Baca selengkapnya di: /artikel/ip-camera-vs-cctv-analog-mana-yang-lebih-baik
+
+### Panduan Perawatan CCTV agar Berumur Panjang
+Tips merawat CCTV agar tahan lama: bersihkan lensa rutin (1-2 bulan), periksa koneksi kabel, update firmware DVR/NVR secara berkala, backup rekaman penting, jaga suhu ruangan DVR tetap dingin dengan ventilasi baik. Baca selengkapnya di: /artikel/panduan-perawatan-cctv-agar-berumur-panjang
+
+### Pentingnya Memasang CCTV Online di Tempat Usaha
+Manfaat CCTV online untuk usaha: monitoring real-time dari smartphone lewat aplikasi (Hik-Connect, DMSS, dll), notifikasi deteksi gerak instan, footage tersimpan aman (HDD lokal + backup cloud opsional), dan bukti valid jika terjadi insiden. Baca selengkapnya di: /artikel/pentingnya-memasang-cctv-online-di-tempat-usaha
+
+## FAQ — Pertanyaan Umum
+
+**Q: Apakah harga sudah termasuk biaya pemasangan?**
+A: Khusus paket bundling (Paket 4 Kamera Hemat dan Paket 8 Kamera IP), harga sudah termasuk jasa instalasi oleh teknisi. Untuk pembelian produk satuan, biaya pemasangan dikenakan terpisah.
+
+**Q: Wilayah mana saja yang dilayani?**
+A: Surabaya, Sidoarjo, Gresik, dan sekitarnya. Untuk area di luar itu, silakan hubungi kami untuk diskusi lebih lanjut.
+
+**Q: Apakah ada garansi?**
+A: Semua produk garansi resmi distributor. Garansi kamera 1-3 tahun tergantung merek. Jasa pemasangan garansi 1 bulan untuk kerusakan akibat pemasangan.
+
+**Q: Bisakah saya konsultasi dulu sebelum beli?**
+A: Tentu! Konsultasi gratis via WhatsApp tanpa biaya. Kami akan survey lokasi dan rekomendasi sistem yang tepat sesuai budget Anda.
+
+**Q: CCTV bisa dilihat dari mana saja?**
+A: Semua sistem kami support remote viewing via smartphone (Android & iOS) melalui aplikasi resmi seperti Hik-Connect, DMSS, atau aplikasi sesuai merek DVR/NVR.

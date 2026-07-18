@@ -78,26 +78,48 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${siteUrl}/#business`,
-  name: "Ronda CCTV",
-  description:
-    "Layanan pemasangan CCTV profesional untuk rumah, kantor, gudang, dan kawasan industri di Surabaya, Sidoarjo, Gresik.",
-  url: siteUrl,
-  telephone: process.env.NEXT_PUBLIC_WHATSAPP?.replace(/^62/, "+62") || "+628000000000",
-  email: "info@rondacctv.com",
-  image: `${siteUrl}/hero.png`,
-  logo: `${siteUrl}/favicon.svg`,
-  areaServed: ["Surabaya", "Sidoarjo", "Gresik"],
-  priceRange: "Rp2.399.000 - Rp12.499.000",
-  openingHours: "Mo-Su 08:00-20:00",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Surabaya",
-    addressRegion: "Jawa Timur",
-    addressCountry: "ID",
-  },
-  sameAs: [`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`],
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "Ronda CCTV",
+      url: siteUrl,
+      description:
+        "Jasa pemasangan CCTV profesional di Surabaya, Sidoarjo, Gresik & sekitarnya.",
+      inLanguage: "id",
+      publisher: { "@id": `${siteUrl}/#business` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${siteUrl}/katalog?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}/#business`,
+      name: "Ronda CCTV",
+      description:
+        "Layanan pemasangan CCTV profesional untuk rumah, kantor, gudang, dan kawasan industri di Surabaya, Sidoarjo, Gresik.",
+      url: siteUrl,
+      telephone: process.env.NEXT_PUBLIC_WHATSAPP?.replace(/^62/, "+62") || "+628176655959",
+      email: "info@rondacctv.com",
+      image: `${siteUrl}/hero.png`,
+      logo: `${siteUrl}/favicon.svg`,
+      areaServed: ["Surabaya", "Sidoarjo", "Gresik"],
+      priceRange: "Rp2.399.000 - Rp12.499.000",
+      openingHours: "Mo-Su 08:00-20:00",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Surabaya",
+        addressRegion: "Jawa Timur",
+        addressCountry: "ID",
+      },
+      sameAs: [`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`],
+    },
+  ],
 };
 
 export default function RootLayout({
