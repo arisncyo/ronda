@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { articles, getArticleBySlug, type Article } from "@/data/articles";
 
-const siteUrl = "https://ronda-cctv.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ronda-cctv.vercel.app";
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));

@@ -74,6 +74,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 const jsonLd = {
@@ -83,7 +86,7 @@ const jsonLd = {
   description:
     "Jasa pemasangan CCTV profesional di Surabaya, Sidoarjo, Gresik & sekitarnya.",
   url: siteUrl,
-  telephone: "080000000000",
+  telephone: process.env.NEXT_PUBLIC_WHATSAPP?.replace(/^62/, "+62") || "+628000000000",
   email: "info@rondacctv.com",
   image: `${siteUrl}/hero.png`,
   areaServed: ["Surabaya", "Sidoarjo", "Gresik"],

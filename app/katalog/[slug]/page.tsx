@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { products, getProductBySlug, type Product } from "@/data/products";
 
-const siteUrl = "https://ronda-cctv.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ronda-cctv.vercel.app";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
