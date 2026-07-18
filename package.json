@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "bun run build && npx serve out",
     "server": "tsx server/src/index.ts",
     "lint": "biome check",
     "format": "biome format --write"

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-primary text-white pt-32 pb-16 md:pb-24 lg:pb-32 z-10">
+    <div className="relative overflow-hidden bg-primary text-white pt-24 pb-16 md:pb-24 lg:pb-32 z-10">
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
           <div className="w-full lg:w-1/2 text-left">
